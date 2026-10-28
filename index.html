@@ -4,200 +4,225 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fora dos Tribunais — Soluções consensuais de conflitos</title>
+<meta name="description" content="Fora dos Tribunais: mediação, conciliação e negociação para resolver conflitos antes do litígio. Iniciativa de estudantes do Ibmec Brasília, sem advocacia.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>⚖️</text></svg>">
-<meta name="description" content="Fora dos Tribunais: mediação, conciliação e negociação para resolver conflitos antes do litígio. Iniciativa de estudantes do Ibmec Brasília.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
 <style>
-:root{
-  --bg:#f6f1e9;--surface:#fffdf8;--ink:#17233a;--muted:#5b6578;--line:#e2d9c9;
-  --accent:#c4552d;--accent-ink:#ffffff;--deep:#17233a;--deep-ink:#f6f1e9;
-  --serif:'Fraunces',Georgia,'Times New Roman',serif;
-  --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
-  color-scheme:light;
-  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#0f1626;--surface:#16203a;--ink:#f1ebdf;--muted:#a3adc2;--line:#26324f;
-    --accent:#e0794f;--accent-ink:#0f1626;--deep:#1b2745;--deep-ink:#f1ebdf;color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0f1626;--surface:#16203a;--ink:#f1ebdf;--muted:#a3adc2;--line:#26324f;
-  --accent:#e0794f;--accent-ink:#0f1626;--deep:#1b2745;--deep-ink:#f1ebdf;color-scheme:dark;
-}
+:root{--bg:#f6f1e9;--surface:#fffdf8;--ink:#17233a;--muted:#5b6578;--line:#e2d9c9;--accent:#c4552d;--accent-ink:#fff;--deep:#17233a;--deep-ink:#f6f1e9;
+--serif:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;--disp:'Syne','Trebuchet MS',sans-serif;--ital:'Instrument Serif',Georgia,serif;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1626;--surface:#16203a;--ink:#f1ebdf;--muted:#a3adc2;--line:#26324f;--accent:#e0794f;--accent-ink:#0f1626;--deep:#1b2745;--deep-ink:#f1ebdf;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1626;--surface:#16203a;--ink:#f1ebdf;--muted:#a3adc2;--line:#26324f;--accent:#e0794f;--accent-ink:#0f1626;--deep:#1b2745;--deep-ink:#f1ebdf;color-scheme:dark}
 *{box-sizing:border-box}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans)}
-h1,h2,h3{font-family:var(--serif);line-height:1.15;margin:0 0 .5em;font-weight:700}
-h1{font-size:clamp(2.4rem,7vw,4.4rem);letter-spacing:-.02em}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans);overflow-x:hidden}
+h1,h2{font-family:var(--serif);line-height:1.15;margin:0 0 .5em;font-weight:700}
+h3{font-family:var(--disp);font-weight:700;font-size:1.12rem;line-height:1.25;margin:0 0 .45em;letter-spacing:-.01em}
+h1{font-size:clamp(2.3rem,7vw,4.2rem);letter-spacing:-.02em}
 h2{font-size:clamp(1.7rem,4vw,2.4rem)}
-h3{font-size:1.3rem}
-p{margin:0 0 1em}
+p{margin:0 0 1em}.muted{color:var(--muted)}
 .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
 section{padding:72px 0}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
-.logo{font-family:var(--serif);font-weight:700;font-size:1.15rem;letter-spacing:-.01em}
+.tag{display:inline-block;font:700 .74rem var(--disp);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.sub{font:italic 1.35rem/1.35 var(--ital);color:var(--accent);margin:0 0 .8em}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.compact{box-shadow:0 6px 24px rgba(0,0,0,.08)}
+header::after{content:"";position:absolute;left:0;bottom:-1px;height:2px;width:calc(var(--sp,0)*100%);background:var(--accent)}
+.hb{display:flex;align-items:center;justify-content:space-between;height:60px;position:relative;gap:12px}
+.logo{font:800 1.12rem var(--disp);letter-spacing:-.02em;white-space:nowrap;color:var(--ink);text-decoration:none;transform:translateX(calc(var(--dx,0px)*var(--p,0)));will-change:transform;transition:opacity .25s}
 .logo span{color:var(--accent)}
-nav{display:flex;gap:20px;font-size:.92rem;overflow-x:auto}
-nav a{color:var(--muted);text-decoration:none;white-space:nowrap}
-nav a:hover{color:var(--ink)}
-.tag{display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
-.hero{padding:88px 0 72px}
-.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:620px}
+nav{max-width:100%;overflow:hidden;transition:max-width .45s cubic-bezier(.2,.8,.2,1);cursor:pointer}
+.ni{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.ni::-webkit-scrollbar{display:none}
+.ni a{font:600 .84rem var(--disp);color:var(--muted);text-decoration:none;white-space:nowrap;padding:8px 12px;border-radius:999px;scroll-snap-align:start;transition:background .2s,color .2s}
+.ni a:hover{background:var(--surface);color:var(--ink)}
+header.compact nav{max-width:112px;-webkit-mask-image:linear-gradient(90deg,#000 62%,transparent);mask-image:linear-gradient(90deg,#000 62%,transparent);background:var(--surface);border:1px solid var(--line);border-radius:999px}
+@media (hover:hover){header.compact nav:hover{max-width:min(430px,44vw);-webkit-mask-image:none;mask-image:none}}
+header.compact nav.open{max-width:calc(100vw - 44px);-webkit-mask-image:none;mask-image:none}
+header.compact:has(nav.open) .logo{opacity:0;pointer-events:none}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;font:700 .92rem var(--disp);text-decoration:none;cursor:pointer;border:1.5px solid var(--accent);transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform .6s}
+.btn:hover::after{transform:translateX(120%)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px -10px var(--accent)}
+.btn:active{transform:scale(.96)}
+.btn i{font-style:normal;transition:transform .25s}.btn:hover i{transform:translateX(5px)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}.btn.ghost{color:var(--ink);border-color:var(--line)}
 .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.btn{display:inline-block;padding:13px 24px;border-radius:999px;font-weight:600;font-size:.97rem;text-decoration:none;cursor:pointer;border:1.5px solid var(--accent)}
-.btn.primary{background:var(--accent);color:var(--accent-ink)}
-.btn.ghost{color:var(--ink);border-color:var(--line)}
-.notice{margin-top:40px;padding:18px 20px;border:1px dashed var(--accent);border-radius:14px;background:var(--surface);font-size:.95rem;max-width:620px}
-.notice strong{color:var(--accent)}
-.deep{background:var(--deep);color:var(--deep-ink)}
-.deep .muted{color:inherit;opacity:.8}
-.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:32px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px}
-.card .n{font-family:var(--serif);color:var(--accent);font-size:2rem;font-weight:700;line-height:1}
-.card p{color:var(--muted);margin:0;font-size:.97rem}
-.compare{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:32px}
-.col{border-radius:18px;padding:26px;border:1px solid var(--line);background:var(--surface)}
-.col.no{background:transparent}
+.hero{padding:84px 0 64px}.hero .lead{font-size:1.2rem;color:var(--muted);max-width:620px}
+.flags{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px}
+.flags span{font:700 .74rem var(--disp);letter-spacing:.05em;text-transform:uppercase;padding:7px 14px;border:1.5px solid var(--accent);color:var(--accent);border-radius:999px}
+.deep{background:var(--deep);color:var(--deep-ink)}.deep .muted{color:inherit;opacity:.8}
+.stmt{margin:30px 0 8px;padding:26px 28px;border-left:5px solid var(--accent);background:rgba(255,255,255,.06);border-radius:0 18px 18px 0;font:700 clamp(1.3rem,3.2vw,1.9rem)/1.25 var(--serif)}
+.stmt small{display:block;margin-top:10px;font:400 .95rem/1.5 var(--sans);opacity:.8}
+.two{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:26px}
+.col{border-radius:18px;padding:24px;background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.col.no{background:transparent;color:var(--deep-ink);border-color:rgba(255,255,255,.2)}
 .col ul{margin:0;padding:0;list-style:none}
-.col li{padding:9px 0 9px 28px;position:relative;border-bottom:1px solid var(--line);font-size:.97rem}
-.col li:last-child{border:0}
-.col li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
-.col.no li::before{content:"✕";color:var(--muted)}
-.steps{counter-reset:s;display:grid;gap:14px;margin-top:28px}
-.step{display:flex;gap:18px;align-items:flex-start;padding:20px 22px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14)}
-.step::before{counter-increment:s;content:counter(s);font-family:var(--serif);font-weight:700;font-size:1.4rem;color:var(--accent);min-width:28px}
-.step p{margin:0;opacity:.85;font-size:.97rem}
-.step b{display:block;font-family:var(--serif);font-size:1.1rem;margin-bottom:2px}
-.muted{color:var(--muted)}
-footer{border-top:1px solid var(--line);padding:40px 0 48px;font-size:.88rem;color:var(--muted)}
-footer p{max-width:720px}
-.areas{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:32px}
-.area{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;border-top:4px solid var(--accent)}
-.area h3{font-size:1.15rem;margin-bottom:.4em}
-.area p{color:var(--muted);font-size:.95rem;margin:0 0 14px}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chips span{font-size:.78rem;padding:4px 11px;border-radius:999px;border:1px solid var(--line);color:var(--ink)}
-.area .how{margin-top:14px;font-size:.8rem;font-weight:600;color:var(--accent);letter-spacing:.03em}
-@media (max-width:640px){section{padding:52px 0}.hero{padding:56px 0 48px}nav{display:none}}
+.col li{padding:9px 0 9px 28px;position:relative;border-bottom:1px solid rgba(128,128,128,.25);font-size:.96rem}
+.col li:last-child{border:0}.col li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}.col.no li::before{content:"✕";opacity:.7}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:30px}
+.card,.area,.src{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,border-color .3s}
+.card:hover,.area:hover,.src:hover{transform:translateY(-6px);box-shadow:0 18px 34px -18px rgba(0,0,0,.35);border-color:var(--accent)}
+.card .n{font:700 2rem var(--serif);color:var(--accent);line-height:1}.card p,.src p{color:var(--muted);margin:0;font-size:.95rem}
+.areas{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:30px}
+.area{border-top:4px solid var(--accent);padding:20px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.chips span{font-size:.78rem;padding:3px 10px;border-radius:999px;border:1px solid var(--line)}
+.how{font:700 .74rem var(--disp);letter-spacing:.05em;text-transform:uppercase;color:var(--accent)}
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 16px;margin-top:26px;scrollbar-width:thin}
+.src{flex:0 0 min(310px,84%);scroll-snap-align:start;display:flex;flex-direction:column}
+.src .k{font:700 .7rem var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.src p{flex:1;margin-bottom:14px}
+.src a{font:700 .84rem var(--disp);color:var(--ink);text-decoration:none;border-bottom:2px solid var(--accent);align-self:flex-start;padding-bottom:2px}
+.src b{display:block;font:500 .8rem var(--sans);color:var(--muted);margin-top:8px}
+.arrows{display:flex;gap:8px}.arw{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font-size:1.2rem;cursor:pointer;transition:transform .2s,background .2s,border-color .2s}
+.arw:hover{border-color:var(--accent);transform:scale(1.08)}.arw:active{transform:scale(.92)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.steps{display:grid;gap:12px;margin-top:26px;counter-reset:s}
+.step{display:flex;gap:18px;padding:18px 22px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);transition:transform .3s,background .3s}
+.step:hover{transform:translateX(8px);background:rgba(255,255,255,.1)}
+.step::before{counter-increment:s;content:counter(s);font:700 1.4rem var(--serif);color:var(--accent);min-width:26px}
+.step b{display:block;font:700 1.02rem var(--disp)}.step p{margin:0;opacity:.85;font-size:.95rem}
+.contact{text-align:center;padding:48px 24px}
+footer{border-top:1px solid var(--line);padding:38px 0 46px;font-size:.88rem;color:var(--muted)}footer p{max-width:740px}
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+@media (max-width:640px){section{padding:52px 0}.hero{padding:52px 0 44px}.logo{font-size:1rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
 </style>
 </head>
-<body>
-<header><div class="wrap">
-  <div class="logo">Fora dos <span>Tribunais</span></div>
-  <nav>
-    <a href="#ideia">A ideia</a><a href="#caminhos">Caminhos</a><a href="#areas">Áreas</a><a href="#como">Como funciona</a><a href="#quem">Quem somos</a><a href="#contato">Contato</a>
-  </nav>
+<body id="top">
+<header id="hd"><div class="wrap hb" id="hb">
+  <a class="logo" id="logo" href="#top">Fora dos <span>Tribunais</span></a>
+  <nav id="nav" aria-label="Seções"><div class="ni">
+    <a href="#ideia">A ideia</a><a href="#caminhos">Caminhos</a><a href="#areas">Áreas</a><a href="#fontes">Fontes</a><a href="#como">Como funciona</a><a href="#contato">Contato</a>
+  </div></nav>
 </div></header>
 
 <main>
 <section class="hero"><div class="wrap">
-  <div class="tag">Soluções consensuais de conflitos</div>
-  <h1>Todo conflito pode começar a se resolver <em style="color:var(--accent);font-style:italic">antes</em> do processo.</h1>
-  <p class="lead">Mediação, conciliação e negociação: caminhos de diálogo para resolver impasses sem litígio. Uma iniciativa de estudantes do Ibmec Brasília.</p>
-  <div class="btns">
-    <a class="btn primary" href="#contato">Quero conversar</a>
-    <a class="btn ghost" href="#ideia">Entenda a ideia</a>
-  </div>
-  <div class="notice"><strong>Importante:</strong> somos estudantes, não advogados. Aqui você encontra diálogo e organização, não aconselhamento jurídico nem representação em processos.</div>
+  <div class="tag rv">Soluções consensuais de conflitos</div>
+  <h1 class="rv" style="--d:.08s">Todo conflito pode começar a se resolver <em style="color:var(--accent);font-family:var(--ital);font-weight:400">antes</em> do processo.</h1>
+  <p class="lead rv" style="--d:.16s">Mediação, conciliação e negociação: caminhos de diálogo para resolver impasses sem litígio. Uma iniciativa de estudantes do Ibmec Brasília.</p>
+  <div class="btns rv" style="--d:.24s"><a class="btn primary" href="#contato">Quero conversar <i>→</i></a><a class="btn ghost" href="#ideia">Entenda a ideia</a></div>
+  <div class="flags rv" style="--d:.32s"><span>Projeto de estudantes</span><span>Sem advocacia</span><span>Sem pareceres jurídicos</span></div>
 </div></section>
 
 <section id="ideia" class="deep"><div class="wrap">
-  <div class="tag">Uma ideia nova</div>
-  <h2>Resolver pela conversa, não pelo confronto.</h2>
-  <p class="muted" style="max-width:680px">Quando surge um desentendimento, o primeiro impulso costuma ser pensar em advogado e processo. Nós propomos um passo anterior: sentar, escutar, entender interesses e construir um acordo que faça sentido para os dois lados.</p>
-  <div class="compare" style="color:var(--ink)">
-    <div class="col">
-      <h3>O que fazemos</h3>
-      <ul>
-        <li>Facilitamos o diálogo entre as partes</li>
-        <li>Ajudamos a organizar interesses e pontos de acordo</li>
-        <li>Explicamos como funcionam os métodos consensuais</li>
-        <li>Mantemos o processo informal, voluntário e confidencial</li>
-      </ul>
-    </div>
-    <div class="col no">
-      <h3 style="color:var(--deep-ink)">O que não fazemos</h3>
-      <ul style="color:var(--deep-ink)">
-        <li>Não somos advogados nem atuamos como tal</li>
-        <li>Não damos parecer ou consultoria jurídica</li>
-        <li>Não representamos ninguém em juízo</li>
-        <li>Não impomos decisão: o acordo é das partes</li>
-      </ul>
-    </div>
+  <div class="tag rv">Uma ideia nova</div>
+  <h2 class="rv">Diálogo para evitar o processo, e não serviço jurídico.</h2>
+  <p class="muted rv" style="max-width:680px">Quando surge um desentendimento, o primeiro impulso costuma ser pensar em advogado e processo. Propomos um passo anterior: sentar, escutar, entender interesses e construir um acordo que faça sentido para os dois lados.</p>
+  <div class="stmt rv">Não fazemos negócios jurídicos.<small>Somos estudantes e ainda não somos advogados. Não advogamos, não representamos ninguém, não elaboramos peças, contratos ou pareceres e não prometemos resultado.</small></div>
+  <div class="two">
+    <div class="col rv"><h3>O que fazemos</h3><ul><li>Facilitamos o diálogo entre as partes</li><li>Ajudamos a organizar interesses e pontos de acordo</li><li>Explicamos como funcionam os métodos consensuais</li><li>Indicamos o caminho certo quando é preciso um advogado</li></ul></div>
+    <div class="col no rv" style="--d:.1s"><h3>O que não fazemos</h3><ul><li>Não prestamos serviço de advocacia</li><li>Não damos parecer nem consultoria jurídica</li><li>Não representamos ninguém em juízo</li><li>Não impomos decisão: o acordo é das partes</li></ul></div>
   </div>
 </div></section>
 
 <section id="caminhos"><div class="wrap">
-  <div class="tag">Três caminhos</div>
-  <h2>Cada conflito pede um jeito de conversar.</h2>
+  <div class="tag rv">Três caminhos</div>
+  <h2 class="rv">Cada conflito pede um jeito de conversar.</h2>
   <div class="grid">
-    <div class="card"><div class="n">01</div><h3>Negociação</h3><p>As próprias partes conversam diretamente, sem terceiros, para chegar a um acordo. É o caminho mais simples e rápido.</p></div>
-    <div class="card"><div class="n">02</div><h3>Mediação</h3><p>Um terceiro imparcial ajuda as partes a se comunicarem e a encontrarem a solução por conta própria. Costuma fazer sentido quando há relação continuada, como família, vizinhança ou sociedade.</p></div>
-    <div class="card"><div class="n">03</div><h3>Conciliação</h3><p>Um terceiro imparcial conduz a conversa e pode sugerir alternativas de acordo. Costuma servir melhor a conflitos pontuais, sem vínculo anterior forte.</p></div>
+    <div class="card rv"><div class="n">01</div><h3>Negociação</h3><p>As próprias partes conversam diretamente, sem terceiros, para chegar a um acordo. É o caminho mais simples e rápido.</p></div>
+    <div class="card rv" style="--d:.1s"><div class="n">02</div><h3>Mediação</h3><p>Um terceiro imparcial ajuda as partes a se comunicarem e a encontrarem a solução por conta própria. Costuma fazer sentido quando há relação continuada.</p></div>
+    <div class="card rv" style="--d:.2s"><div class="n">03</div><h3>Conciliação</h3><p>Um terceiro imparcial conduz a conversa e pode sugerir alternativas de acordo. Costuma servir melhor a conflitos pontuais.</p></div>
   </div>
-  <p class="muted" style="margin-top:28px;font-size:.95rem">Esses métodos são reconhecidos pela legislação brasileira, como o Código de Processo Civil e a Lei de Mediação (Lei 13.140/2015).</p>
 </div></section>
 
 <section id="areas" style="border-top:1px solid var(--line)"><div class="wrap">
-  <div class="tag">Onde isso acontece</div>
-  <h2>Em quais áreas o diálogo resolve?</h2>
-  <p class="muted" style="max-width:680px">Os métodos consensuais aparecem em praticamente todos os ramos do cotidiano. Estas são as áreas em que eles mais são usados.</p>
+  <div class="tag rv">Onde isso acontece</div>
+  <h2 class="rv">Em quais áreas o diálogo resolve?</h2>
+  <p class="sub rv">Quase todo ramo do cotidiano.</p>
   <div class="areas">
-    <div class="area"><h3>Família</h3><p>Conflitos em que o vínculo continua depois do acordo. A lei processual incentiva a mediação e a conciliação nessas disputas.</p><div class="chips"><span>Divórcio</span><span>Guarda</span><span>Pensão</span><span>Partilha</span></div><div class="how">Mediação</div></div>
-    <div class="area"><h3>Consumo</h3><p>Problemas entre consumidor e empresa que costumam ser resolvidos por contato direto ou por plataformas de atendimento.</p><div class="chips"><span>Cobranças</span><span>Produto com defeito</span><span>Serviços</span></div><div class="how">Negociação · Conciliação</div></div>
-    <div class="area"><h3>Trabalho</h3><p>Divergências entre empregador e empregado, que muitas vezes terminam em acordo antes ou durante o processo.</p><div class="chips"><span>Verbas rescisórias</span><span>Jornada</span><span>Horas extras</span></div><div class="how">Conciliação · Negociação</div></div>
-    <div class="area"><h3>Empresas e sociedades</h3><p>Conflitos entre sócios, fornecedores e parceiros, em que preservar a relação comercial pesa tanto quanto o valor discutido.</p><div class="chips"><span>Sócios</span><span>Contratos</span><span>Dívidas</span></div><div class="how">Mediação · Negociação</div></div>
-    <div class="area"><h3>Vizinhança e condomínio</h3><p>Convivência diária pede soluções rápidas e que não deteriorem a relação entre as pessoas.</p><div class="chips"><span>Barulho</span><span>Áreas comuns</span><span>Taxas</span></div><div class="how">Mediação</div></div>
-    <div class="area"><h3>Contratos e moradia</h3><p>Acordos sobre pagamento, prazo e cumprimento de obrigações entre pessoas e empresas.</p><div class="chips"><span>Aluguel</span><span>Compra e venda</span><span>Prestação de serviço</span></div><div class="how">Negociação · Conciliação</div></div>
-    <div class="area"><h3>Saúde</h3><p>Impasses entre pacientes, planos e prestadores, em que o tempo da solução faz diferença.</p><div class="chips"><span>Planos de saúde</span><span>Cobertura</span><span>Reembolso</span></div><div class="how">Conciliação · Mediação</div></div>
-    <div class="area"><h3>Poder público</h3><p>Conflitos envolvendo a administração pública, que a lei também permite resolver por meios consensuais.</p><div class="chips"><span>Serviços públicos</span><span>Terras</span><span>Contratos administrativos</span></div><div class="how">Mediação · Conciliação</div></div>
+    <div class="area rv"><h3>Família</h3><div class="chips"><span>Divórcio</span><span>Guarda</span><span>Pensão</span><span>Partilha</span></div><div class="how">Mediação</div></div>
+    <div class="area rv" style="--d:.05s"><h3>Consumo</h3><div class="chips"><span>Cobranças</span><span>Produto com defeito</span><span>Serviços</span></div><div class="how">Negociação · Conciliação</div></div>
+    <div class="area rv" style="--d:.1s"><h3>Trabalho</h3><div class="chips"><span>Verbas rescisórias</span><span>Jornada</span><span>Horas extras</span></div><div class="how">Conciliação · Negociação</div></div>
+    <div class="area rv" style="--d:.15s"><h3>Empresas e sociedades</h3><div class="chips"><span>Sócios</span><span>Contratos</span><span>Dívidas</span></div><div class="how">Mediação · Negociação</div></div>
+    <div class="area rv"><h3>Vizinhança e condomínio</h3><div class="chips"><span>Barulho</span><span>Áreas comuns</span><span>Taxas</span></div><div class="how">Mediação</div></div>
+    <div class="area rv" style="--d:.05s"><h3>Contratos e moradia</h3><div class="chips"><span>Aluguel</span><span>Compra e venda</span><span>Prestação de serviço</span></div><div class="how">Negociação · Conciliação</div></div>
+    <div class="area rv" style="--d:.1s"><h3>Saúde</h3><div class="chips"><span>Planos de saúde</span><span>Cobertura</span><span>Reembolso</span></div><div class="how">Conciliação · Mediação</div></div>
+    <div class="area rv" style="--d:.15s"><h3>Poder público</h3><div class="chips"><span>Serviços públicos</span><span>Terras</span><span>Contratos administrativos</span></div><div class="how">Mediação · Conciliação</div></div>
+  </div>
+</div></section>
+
+<section id="fontes" style="border-top:1px solid var(--line)"><div class="wrap">
+  <div class="head"><div><div class="tag rv">Fontes e matérias</div><h2 class="rv" style="margin:0">Quem fala do assunto.</h2></div>
+  <div class="arrows"><button class="arw" data-d="-1" aria-label="Anterior">‹</button><button class="arw" data-d="1" aria-label="Próximo">›</button></div></div>
+  <p class="muted rv" style="margin-top:12px">Notícias, normas e páginas oficiais que mostram que a solução consensual é política pública no Brasil. Conferidas em 28/10/2026; os links abrem os textos originais.</p>
+  <div class="rail" id="rail">
+    <article class="src"><div class="k">Notícia · set/2026</div><h3>XXI Semana Nacional da Conciliação será de 3 a 6 de novembro</h3><p>Campanha do CNJ que reúne tribunais de todo o país em audiências concentradas para estimular acordos.</p><a href="https://www.cjf.jus.br/cjf/noticias/2026/setembro/xxi-semana-nacional-da-conciliacao-sera-realizada-de-3-a-6-de-novembro" target="_blank" rel="noopener">Ler matéria →</a><b>Conselho da Justiça Federal</b></article>
+    <article class="src"><div class="k">Página oficial · Portaria</div><h3>Semana Nacional da Conciliação</h3><p>Realizada pelo CNJ desde 2006. A edição de 2026 foi formalizada pela Portaria Presidência nº 472, de 28/09/2026.</p><a href="https://www.cnj.jus.br/semana-nacional-de-conciliacao/" target="_blank" rel="noopener">Abrir página →</a><b>Conselho Nacional de Justiça</b></article>
+    <article class="src"><div class="k">Jornal · jun/2026</div><h3>Semana da Conciliação tem R$ 2 bi em acordos</h3><p>Na Justiça do Trabalho, a semana de conciliação de maio de 2026 homologou mais de R$ 2 bilhões em acordos.</p><a href="https://digital.correiodamanha.com.br/jornalcorreiodamanha/2026/06/03/22410e/pdf/0306cmanha11.pdf" target="_blank" rel="noopener">Ler no jornal →</a><b>Correio da Manhã</b></article>
+    <article class="src"><div class="k">Norma</div><h3>Resolução CNJ nº 125/2010</h3><p>Institui a Política Judiciária Nacional de tratamento adequado dos conflitos de interesses.</p><a href="https://www.tjes.jus.br/corregedoria/2016/09/14/resolucao-cnj-no-125-de-29112010/" target="_blank" rel="noopener">Ver texto →</a><b>Texto publicado pelo TJES</b></article>
+    <article class="src"><div class="k">Lei</div><h3>Lei nº 13.140/2015 · Lei da Mediação</h3><p>Regula a mediação entre particulares e a autocomposição de conflitos na administração pública.</p><a href="https://planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13140.htm" target="_blank" rel="noopener">Ver lei →</a><b>Planalto</b></article>
+    <article class="src"><div class="k">Código</div><h3>CPC (Lei 13.105/2015), art. 3º</h3><p>Prevê que o Estado promova a solução consensual e que juízes, advogados e defensores a estimulem.</p><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm" target="_blank" rel="noopener">Ver código →</a><b>Planalto</b></article>
   </div>
 </div></section>
 
 <section id="como" class="deep"><div class="wrap">
-  <div class="tag">Como funciona</div>
-  <h2>Do primeiro contato ao acordo.</h2>
+  <div class="tag rv">Como funciona</div>
+  <h2 class="rv">Do primeiro contato ao acordo.</h2>
   <div class="steps">
-    <div class="step"><div><b>Você nos conta o impasse</b><p>Um primeiro contato para entender o que está acontecendo, sem formalidades.</p></div></div>
-    <div class="step"><div><b>Escolhemos o melhor caminho</b><p>Negociação, mediação ou conciliação: explicamos cada um e você decide.</p></div></div>
-    <div class="step"><div><b>Convidamos a outra parte</b><p>O diálogo só acontece se todos quiserem participar. A voluntariedade é a regra.</p></div></div>
-    <div class="step"><div><b>Conversa conduzida</b><p>Cada lado fala e é ouvido, em ambiente respeitoso e confidencial.</p></div></div>
-    <div class="step"><div><b>Acordo, ou próximo passo</b><p>Se houver acordo, ele é registrado. Se não, orientamos a procurar um advogado ou a Defensoria Pública.</p></div></div>
+    <div class="step rv"><div><b>Você nos conta o impasse</b><p>Um primeiro contato para entender o que está acontecendo, sem formalidades.</p></div></div>
+    <div class="step rv"><div><b>Escolhemos o melhor caminho</b><p>Negociação, mediação ou conciliação: explicamos cada um e você decide.</p></div></div>
+    <div class="step rv"><div><b>Convidamos a outra parte</b><p>O diálogo só acontece se todos quiserem participar. A voluntariedade é a regra.</p></div></div>
+    <div class="step rv"><div><b>Conversa conduzida</b><p>Cada lado fala e é ouvido, em ambiente respeitoso e confidencial.</p></div></div>
+    <div class="step rv"><div><b>Acordo, ou próximo passo</b><p>Se não houver acordo ou se for preciso orientação jurídica, indicamos procurar um advogado ou a Defensoria Pública.</p></div></div>
   </div>
 </div></section>
 
-<section id="quem"><div class="wrap">
-  <div class="tag">Quem somos</div>
-  <h2>Estudantes de Direito acreditando em outro jeito de resolver.</h2>
-  <p class="muted" style="max-width:680px">O Fora dos Tribunais nasce de alunos do Ibmec Brasília interessados em métodos adequados de solução de conflitos. Estamos aprendendo, praticando o diálogo e levando essa cultura para quem precisa de uma saída antes do litígio.</p>
-</div></section>
-
-<section id="contato" style="padding-top:0"><div class="wrap">
-  <div class="card" style="text-align:center;padding:48px 26px">
+<section id="contato"><div class="wrap">
+  <div class="card contact rv">
+    <div class="tag">Contato</div>
     <h2>Tem um impasse? Vamos conversar.</h2>
-    <p class="muted">Nos chame no Instagram e conte sua situação.</p>
-    <a class="btn primary" href="https://www.instagram.com/foradostribunais/" target="_blank" rel="noopener">@foradostribunais</a>
+    <p class="muted">Escreva para o e-mail do projeto ou nos chame no Instagram.</p>
+    <div class="btns" style="justify-content:center"><a class="btn primary" href="mailto:solucoesbsl@gmail.com">solucoesbsl@gmail.com <i>→</i></a><a class="btn ghost" href="https://www.instagram.com/foradostribunais/" target="_blank" rel="noopener">@foradostribunais</a></div>
   </div>
 </div></section>
 </main>
 
 <footer><div class="wrap">
-  <p><strong>Aviso:</strong> este projeto é uma iniciativa de estudantes e não presta serviços de advocacia nem consultoria jurídica. Nada neste site substitui a orientação de um advogado ou da Defensoria Pública.</p>
+  <p><strong>Aviso:</strong> o Fora dos Tribunais é uma iniciativa de estudantes e não realiza negócios jurídicos: não presta serviços de advocacia, consultoria ou parecer jurídico. Nada neste site substitui a orientação de um advogado ou da Defensoria Pública.</p>
   <p>© 2026 Fora dos Tribunais · Brasília, DF</p>
 </div></footer>
 
 <script>
-document.querySelectorAll('a[href^="#"]').forEach(function(a){
-  a.addEventListener('click',function(e){
-    var t=document.querySelector(a.getAttribute('href'));
-    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
-  });
+(function(){
+var d=document,hd=d.getElementById('hd'),hb=d.getElementById('hb'),logo=d.getElementById('logo'),nav=d.getElementById('nav'),root=d.documentElement,tk=false;
+function measure(){
+  var l=logo.offsetLeft+hb.getBoundingClientRect().left+parseFloat(getComputedStyle(hb).paddingLeft||0)*0;
+  root.style.setProperty('--dx',(innerWidth/2-logo.offsetWidth/2-l)+'px');
+}
+function onScroll(){
+  var y=scrollY,p=Math.min(1,Math.max(0,y/260)),h=d.body.scrollHeight-innerHeight;
+  root.style.setProperty('--p',p.toFixed(3));
+  root.style.setProperty('--sp',h>0?(y/h).toFixed(3):0);
+  var c=p>=.85;hd.classList.toggle('compact',c);
+  if(!c)nav.classList.remove('open');
+  tk=false;
+}
+addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(onScroll)}},{passive:true});
+addEventListener('resize',function(){measure();onScroll()});
+addEventListener('load',function(){measure();onScroll()});
+measure();onScroll();
+nav.addEventListener('click',function(e){
+  if(!hd.classList.contains('compact'))return;
+  if(e.target.tagName==='A'){nav.classList.remove('open')}else{nav.classList.add('open')}
 });
+d.addEventListener('click',function(e){if(!nav.contains(e.target))nav.classList.remove('open')});
+d.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){
+  var h=a.getAttribute('href'),t=h==='#top'?d.body:d.querySelector(h);
+  if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}})});
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  d.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+}else{d.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')})}
+var rail=d.getElementById('rail');
+d.querySelectorAll('.arw').forEach(function(b){b.addEventListener('click',function(){rail.scrollBy({left:b.dataset.d*330,behavior:'smooth'})})});
+})();
 </script>
 </body>
 </html>
