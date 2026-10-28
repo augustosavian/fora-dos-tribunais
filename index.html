@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fora dos Tribunais — Soluções consensuais de conflitos</title>
-<meta name="description" content="Fora dos Tribunais: mediação, conciliação e negociação para resolver conflitos antes do litígio. Iniciativa de estudantes do Ibmec Brasília, sem advocacia.">
+<meta name="description" content="Fora dos Tribunais: orientação e direcionamento para quem quer resolver um conflito antes do litígio. Iniciativa de estudantes do Ibmec Brasília, sem advocacia.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>⚖️</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Bricolage+Grotesque:wght@400;500;600&family=Syne:wght@600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 <style>
 :root{--bg:#f6f1e9;--surface:#fffdf8;--ink:#17233a;--muted:#5b6578;--line:#e2d9c9;--accent:#c4552d;--accent-ink:#fff;--deep:#17233a;--deep-ink:#f6f1e9;
---serif:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;--disp:'Syne','Trebuchet MS',sans-serif;--ital:'Instrument Serif',Georgia,serif;
+--serif:'Fraunces',Georgia,serif;--sans:'Bricolage Grotesque',system-ui,-apple-system,'Segoe UI',sans-serif;--disp:'Syne','Trebuchet MS',sans-serif;--ital:'Instrument Serif',Georgia,serif;
 color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1626;--surface:#16203a;--ink:#f1ebdf;--muted:#a3adc2;--line:#26324f;--accent:#e0794f;--accent-ink:#0f1626;--deep:#1b2745;--deep-ink:#f1ebdf;color-scheme:dark}}
 :root[data-theme="dark"]{--bg:#0f1626;--surface:#16203a;--ink:#f1ebdf;--muted:#a3adc2;--line:#26324f;--accent:#e0794f;--accent-ink:#0f1626;--deep:#1b2745;--deep-ink:#f1ebdf;color-scheme:dark}
@@ -78,6 +78,7 @@ header.compact:has(nav.open) .logo{opacity:0;pointer-events:none}
 .src p{flex:1;margin-bottom:14px}
 .src a{font:700 .84rem var(--disp);color:var(--ink);text-decoration:none;border-bottom:2px solid var(--accent);align-self:flex-start;padding-bottom:2px}
 .src b{display:block;font:500 .8rem var(--sans);color:var(--muted);margin-top:8px}
+.lk{display:flex;gap:16px;flex-wrap:wrap}.lk a{align-self:auto}
 .arrows{display:flex;gap:8px}.arw{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font-size:1.2rem;cursor:pointer;transition:transform .2s,background .2s,border-color .2s}
 .arw:hover{border-color:var(--accent);transform:scale(1.08)}.arw:active{transform:scale(.92)}
 .head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
@@ -98,7 +99,7 @@ footer{border-top:1px solid var(--line);padding:38px 0 46px;font-size:.88rem;col
 <header id="hd"><div class="wrap hb" id="hb">
   <a class="logo" id="logo" href="#top">Fora dos <span>Tribunais</span></a>
   <nav id="nav" aria-label="Seções"><div class="ni">
-    <a href="#ideia">A ideia</a><a href="#caminhos">Caminhos</a><a href="#areas">Áreas</a><a href="#fontes">Fontes</a><a href="#como">Como funciona</a><a href="#contato">Contato</a>
+    <a href="#ideia">A ideia</a><a href="#caminhos">Caminhos</a><a href="#areas">Seu caso</a><a href="#fontes">Direcionamentos</a><a href="#como">Como funciona</a><a href="#contato">Contato</a>
   </div></nav>
 </div></header>
 
@@ -106,59 +107,60 @@ footer{border-top:1px solid var(--line);padding:38px 0 46px;font-size:.88rem;col
 <section class="hero"><div class="wrap">
   <div class="tag rv">Soluções consensuais de conflitos</div>
   <h1 class="rv" style="--d:.08s">Todo conflito pode começar a se resolver <em style="color:var(--accent);font-family:var(--ital);font-weight:400">antes</em> do processo.</h1>
-  <p class="lead rv" style="--d:.16s">Mediação, conciliação e negociação: caminhos de diálogo para resolver impasses sem litígio. Uma iniciativa de estudantes do Ibmec Brasília.</p>
+  <p class="lead rv" style="--d:.16s">Está em um conflito e não sabe por onde começar? Nós orientamos e direcionamos você ao caminho certo, antes de qualquer processo. Uma iniciativa de estudantes do Ibmec Brasília.</p>
   <div class="btns rv" style="--d:.24s"><a class="btn primary" href="#contato">Quero conversar <i>→</i></a><a class="btn ghost" href="#ideia">Entenda a ideia</a></div>
-  <div class="flags rv" style="--d:.32s"><span>Projeto de estudantes</span><span>Sem advocacia</span><span>Sem pareceres jurídicos</span></div>
+  <div class="flags rv" style="--d:.32s"><span>Projeto de estudantes</span><span>Sem advocacia</span><span>Orientação e direcionamento</span></div>
 </div></section>
 
 <section id="ideia" class="deep"><div class="wrap">
   <div class="tag rv">Uma ideia nova</div>
-  <h2 class="rv">Diálogo para evitar o processo, e não serviço jurídico.</h2>
-  <p class="muted rv" style="max-width:680px">Quando surge um desentendimento, o primeiro impulso costuma ser pensar em advogado e processo. Propomos um passo anterior: sentar, escutar, entender interesses e construir um acordo que faça sentido para os dois lados.</p>
-  <div class="stmt rv">Não fazemos negócios jurídicos.<small>Somos estudantes e ainda não somos advogados. Não advogamos, não representamos ninguém, não elaboramos peças, contratos ou pareceres e não prometemos resultado.</small></div>
+  <h2 class="rv">Somos o começo: orientamos, não resolvemos.</h2>
+  <p class="muted rv" style="max-width:680px">Quando surge um desentendimento, muita gente pensa direto em processo, ou simplesmente não sabe o que fazer. Nós ficamos no passo anterior: entender o seu caso, mostrar as opções e apontar para onde ir.</p>
+  <div class="stmt rv">Não fazemos negócios jurídicos.<small>Somos estudantes e ainda não somos advogados. Não advogamos, não mediamos nem conciliamos, não representamos ninguém, não elaboramos peças, contratos ou pareceres e não prometemos resultado.</small></div>
   <div class="two">
-    <div class="col rv"><h3>O que fazemos</h3><ul><li>Facilitamos o diálogo entre as partes</li><li>Ajudamos a organizar interesses e pontos de acordo</li><li>Explicamos como funcionam os métodos consensuais</li><li>Indicamos o caminho certo quando é preciso um advogado</li></ul></div>
-    <div class="col no rv" style="--d:.1s"><h3>O que não fazemos</h3><ul><li>Não prestamos serviço de advocacia</li><li>Não damos parecer nem consultoria jurídica</li><li>Não representamos ninguém em juízo</li><li>Não impomos decisão: o acordo é das partes</li></ul></div>
+    <div class="col rv"><h3>O que fazemos</h3><ul><li>Escutamos o seu caso e ajudamos a entendê-lo</li><li>Explicamos como funcionam negociação, mediação e conciliação</li><li>Apontamos o serviço ou a instituição mais adequados</li><li>Dizemos quando é hora de procurar um advogado ou a Defensoria</li></ul></div>
+    <div class="col no rv" style="--d:.1s"><h3>O que não fazemos</h3><ul><li>Não prestamos serviço de advocacia</li><li>Não conduzimos mediações nem conciliações</li><li>Não damos parecer nem consultoria jurídica</li><li>Não representamos ninguém em juízo</li></ul></div>
   </div>
 </div></section>
 
 <section id="caminhos"><div class="wrap">
-  <div class="tag rv">Três caminhos</div>
-  <h2 class="rv">Cada conflito pede um jeito de conversar.</h2>
+  <div class="tag rv">Caminhos possíveis</div>
+  <h2 class="rv">Cada conflito pede um caminho diferente.</h2>
+  <p class="muted rv" style="max-width:680px">Nós não conduzimos nenhum deles: explicamos cada caminho e direcionamos você a quem pode conduzi-lo.</p>
   <div class="grid">
-    <div class="card rv"><div class="n">01</div><h3>Negociação</h3><p>As próprias partes conversam diretamente, sem terceiros, para chegar a um acordo. É o caminho mais simples e rápido.</p></div>
+    <div class="card rv"><div class="n">01</div><h3>Negociação</h3><p>Você e a outra parte conversam diretamente, sem terceiros, para chegar a um acordo. É o caminho mais simples e rápido.</p></div>
     <div class="card rv" style="--d:.1s"><div class="n">02</div><h3>Mediação</h3><p>Um terceiro imparcial ajuda as partes a se comunicarem e a encontrarem a solução por conta própria. Costuma fazer sentido quando há relação continuada.</p></div>
     <div class="card rv" style="--d:.2s"><div class="n">03</div><h3>Conciliação</h3><p>Um terceiro imparcial conduz a conversa e pode sugerir alternativas de acordo. Costuma servir melhor a conflitos pontuais.</p></div>
   </div>
 </div></section>
 
 <section id="areas" style="border-top:1px solid var(--line)"><div class="wrap">
-  <div class="tag rv">Onde isso acontece</div>
-  <h2 class="rv">Em quais áreas o diálogo resolve?</h2>
-  <p class="sub rv">Quase todo ramo do cotidiano.</p>
+  <div class="tag rv">Seu caso</div>
+  <h2 class="rv">Reconhece o seu conflito aqui?</h2>
+  <p class="sub rv">Qualquer que seja o assunto, o primeiro passo é saber para onde ir.</p>
   <div class="areas">
-    <div class="area rv"><h3>Família</h3><div class="chips"><span>Divórcio</span><span>Guarda</span><span>Pensão</span><span>Partilha</span></div><div class="how">Mediação</div></div>
-    <div class="area rv" style="--d:.05s"><h3>Consumo</h3><div class="chips"><span>Cobranças</span><span>Produto com defeito</span><span>Serviços</span></div><div class="how">Negociação · Conciliação</div></div>
-    <div class="area rv" style="--d:.1s"><h3>Trabalho</h3><div class="chips"><span>Verbas rescisórias</span><span>Jornada</span><span>Horas extras</span></div><div class="how">Conciliação · Negociação</div></div>
-    <div class="area rv" style="--d:.15s"><h3>Empresas e sociedades</h3><div class="chips"><span>Sócios</span><span>Contratos</span><span>Dívidas</span></div><div class="how">Mediação · Negociação</div></div>
-    <div class="area rv"><h3>Vizinhança e condomínio</h3><div class="chips"><span>Barulho</span><span>Áreas comuns</span><span>Taxas</span></div><div class="how">Mediação</div></div>
-    <div class="area rv" style="--d:.05s"><h3>Contratos e moradia</h3><div class="chips"><span>Aluguel</span><span>Compra e venda</span><span>Prestação de serviço</span></div><div class="how">Negociação · Conciliação</div></div>
-    <div class="area rv" style="--d:.1s"><h3>Saúde</h3><div class="chips"><span>Planos de saúde</span><span>Cobertura</span><span>Reembolso</span></div><div class="how">Conciliação · Mediação</div></div>
-    <div class="area rv" style="--d:.15s"><h3>Poder público</h3><div class="chips"><span>Serviços públicos</span><span>Terras</span><span>Contratos administrativos</span></div><div class="how">Mediação · Conciliação</div></div>
+    <div class="area rv"><h3>Família</h3><div class="chips"><span>Divórcio</span><span>Guarda</span><span>Pensão</span><span>Partilha</span></div></div>
+    <div class="area rv" style="--d:.05s"><h3>Consumo</h3><div class="chips"><span>Cobranças</span><span>Produto com defeito</span><span>Serviços</span></div></div>
+    <div class="area rv" style="--d:.1s"><h3>Trabalho</h3><div class="chips"><span>Verbas rescisórias</span><span>Jornada</span><span>Horas extras</span></div></div>
+    <div class="area rv" style="--d:.15s"><h3>Empresas e sociedades</h3><div class="chips"><span>Sócios</span><span>Contratos</span><span>Dívidas</span></div></div>
+    <div class="area rv"><h3>Vizinhança e condomínio</h3><div class="chips"><span>Barulho</span><span>Áreas comuns</span><span>Taxas</span></div></div>
+    <div class="area rv" style="--d:.05s"><h3>Contratos e moradia</h3><div class="chips"><span>Aluguel</span><span>Compra e venda</span><span>Prestação de serviço</span></div></div>
+    <div class="area rv" style="--d:.1s"><h3>Saúde</h3><div class="chips"><span>Planos de saúde</span><span>Cobertura</span><span>Reembolso</span></div></div>
+    <div class="area rv" style="--d:.15s"><h3>Poder público</h3><div class="chips"><span>Serviços públicos</span><span>Terras</span><span>Contratos administrativos</span></div></div>
   </div>
 </div></section>
 
 <section id="fontes" style="border-top:1px solid var(--line)"><div class="wrap">
-  <div class="head"><div><div class="tag rv">Fontes e matérias</div><h2 class="rv" style="margin:0">Quem fala do assunto.</h2></div>
+  <div class="head"><div><div class="tag rv">Para onde direcionamos</div><h2 class="rv" style="margin:0">Cada situação tem uma porta certa.</h2></div>
   <div class="arrows"><button class="arw" data-d="-1" aria-label="Anterior">‹</button><button class="arw" data-d="1" aria-label="Próximo">›</button></div></div>
-  <p class="muted rv" style="margin-top:12px">Notícias, normas e páginas oficiais que mostram que a solução consensual é política pública no Brasil. Conferidas em 28/10/2026; os links abrem os textos originais.</p>
+  <p class="muted rv" style="margin-top:12px;max-width:700px">Não mediamos nem conciliamos: mostramos por onde começar. Estes são serviços e instituições oficiais que podem conduzir o seu caso. Conferido em 28/10/2026; os links abrem os sites ou textos originais.</p>
   <div class="rail" id="rail">
-    <article class="src"><div class="k">Notícia · set/2026</div><h3>XXI Semana Nacional da Conciliação será de 3 a 6 de novembro</h3><p>Campanha do CNJ que reúne tribunais de todo o país em audiências concentradas para estimular acordos.</p><a href="https://www.cjf.jus.br/cjf/noticias/2026/setembro/xxi-semana-nacional-da-conciliacao-sera-realizada-de-3-a-6-de-novembro" target="_blank" rel="noopener">Ler matéria →</a><b>Conselho da Justiça Federal</b></article>
-    <article class="src"><div class="k">Página oficial · Portaria</div><h3>Semana Nacional da Conciliação</h3><p>Realizada pelo CNJ desde 2006. A edição de 2026 foi formalizada pela Portaria Presidência nº 472, de 28/09/2026.</p><a href="https://www.cnj.jus.br/semana-nacional-de-conciliacao/" target="_blank" rel="noopener">Abrir página →</a><b>Conselho Nacional de Justiça</b></article>
-    <article class="src"><div class="k">Jornal · jun/2026</div><h3>Semana da Conciliação tem R$ 2 bi em acordos</h3><p>Na Justiça do Trabalho, a semana de conciliação de maio de 2026 homologou mais de R$ 2 bilhões em acordos.</p><a href="https://digital.correiodamanha.com.br/jornalcorreiodamanha/2026/06/03/22410e/pdf/0306cmanha11.pdf" target="_blank" rel="noopener">Ler no jornal →</a><b>Correio da Manhã</b></article>
-    <article class="src"><div class="k">Norma</div><h3>Resolução CNJ nº 125/2010</h3><p>Institui a Política Judiciária Nacional de tratamento adequado dos conflitos de interesses.</p><a href="https://www.tjes.jus.br/corregedoria/2016/09/14/resolucao-cnj-no-125-de-29112010/" target="_blank" rel="noopener">Ver texto →</a><b>Texto publicado pelo TJES</b></article>
-    <article class="src"><div class="k">Lei</div><h3>Lei nº 13.140/2015 · Lei da Mediação</h3><p>Regula a mediação entre particulares e a autocomposição de conflitos na administração pública.</p><a href="https://planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13140.htm" target="_blank" rel="noopener">Ver lei →</a><b>Planalto</b></article>
-    <article class="src"><div class="k">Código</div><h3>CPC (Lei 13.105/2015), art. 3º</h3><p>Prevê que o Estado promova a solução consensual e que juízes, advogados e defensores a estimulem.</p><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm" target="_blank" rel="noopener">Ver código →</a><b>Planalto</b></article>
+    <article class="src"><div class="k">Antes do processo · DF</div><h3>Cejusc: conciliação pré-processual</h3><p>No DF, os Centros Judiciários de Solução de Conflitos do TJDFT fazem conciliações e mediações pré-processuais, e qualquer pessoa pode buscá-los sem abrir processo. Confira locais e condições atuais.</p><a href="https://www.tjdft.jus.br/publicacoes/edicoes/manuais/posto-avancado-uniceub-tjdft" target="_blank" rel="noopener">Ver no TJDFT →</a><b>Tribunal de Justiça do DF</b></article>
+    <article class="src"><div class="k">Assistência jurídica</div><h3>Defensoria Pública do DF</h3><p>Orientação e defesa gratuitas para quem não pode pagar advogado sem prejudicar o próprio sustento. O atendimento começa com uma triagem.</p><a href="https://www.defensoria.df.gov.br/quem-tem-direito-a-assistencia-juridica-gratuita-da-dpdf/" target="_blank" rel="noopener">Quem tem direito →</a><b>Defensoria Pública do DF</b></article>
+    <article class="src"><div class="k">Consumo</div><h3>Consumidor.gov.br</h3><p>Serviço público e gratuito em que consumidor e empresa conversam direto pela internet. A participação das empresas é voluntária; se não resolver, ainda dá para buscar Procon, Defensoria ou Juizado.</p><a href="https://www.consumidor.gov.br/" target="_blank" rel="noopener">Abrir serviço →</a><b>Governo federal</b></article>
+    <article class="src"><div class="k">Já tem processo?</div><h3>Semana Nacional da Conciliação</h3><p>De 3 a 6 de novembro de 2026, os tribunais fazem audiências concentradas de acordo. Quem já tem processo deve procurar o tribunal onde ele tramita.</p><a href="https://www.cjf.jus.br/cjf/noticias/2026/setembro/xxi-semana-nacional-da-conciliacao-sera-realizada-de-3-a-6-de-novembro" target="_blank" rel="noopener">Ler matéria →</a><b>Conselho da Justiça Federal</b></article>
+    <article class="src"><div class="k">Quando é preciso advogado</div><h3>Advogado particular</h3><p>Se o caso pede parecer, elaboração de documentos ou ação na Justiça, é hora de procurar um advogado. Nós ajudamos você a entender quando é esse o caso.</p><b>Orientação profissional</b></article>
+    <article class="src"><div class="k">Base legal</div><h3>Por que esse caminho existe</h3><p>A lei brasileira incentiva a solução consensual dos conflitos, antes e durante o processo.</p><div class="lk"><a href="https://www.tjes.jus.br/corregedoria/2016/09/14/resolucao-cnj-no-125-de-29112010/" target="_blank" rel="noopener">Res. CNJ 125</a><a href="https://planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13140.htm" target="_blank" rel="noopener">Lei 13.140</a><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm" target="_blank" rel="noopener">CPC art. 3º</a></div></article>
   </div>
 </div></section>
 
@@ -167,10 +169,10 @@ footer{border-top:1px solid var(--line);padding:38px 0 46px;font-size:.88rem;col
   <h2 class="rv">Do primeiro contato ao acordo.</h2>
   <div class="steps">
     <div class="step rv"><div><b>Você nos conta o impasse</b><p>Um primeiro contato para entender o que está acontecendo, sem formalidades.</p></div></div>
-    <div class="step rv"><div><b>Escolhemos o melhor caminho</b><p>Negociação, mediação ou conciliação: explicamos cada um e você decide.</p></div></div>
-    <div class="step rv"><div><b>Convidamos a outra parte</b><p>O diálogo só acontece se todos quiserem participar. A voluntariedade é a regra.</p></div></div>
-    <div class="step rv"><div><b>Conversa conduzida</b><p>Cada lado fala e é ouvido, em ambiente respeitoso e confidencial.</p></div></div>
-    <div class="step rv"><div><b>Acordo, ou próximo passo</b><p>Se não houver acordo ou se for preciso orientação jurídica, indicamos procurar um advogado ou a Defensoria Pública.</p></div></div>
+    <div class="step rv"><div><b>Entendemos o seu caso</b><p>Ouvimos a situação e identificamos o tipo de conflito.</p></div></div>
+    <div class="step rv"><div><b>Mostramos as opções</b><p>Negociação, mediação, conciliação ou outro caminho: explicamos cada um.</p></div></div>
+    <div class="step rv"><div><b>Direcionamos para o lugar certo</b><p>Apontamos o serviço ou a instituição que pode conduzir o seu caso.</p></div></div>
+    <div class="step rv"><div><b>Você segue com quem pode resolver</b><p>Mediação, conciliação, Defensoria, Procon ou advogado: a condução do caso passa a ser deles.</p></div></div>
   </div>
 </div></section>
 
@@ -178,14 +180,14 @@ footer{border-top:1px solid var(--line);padding:38px 0 46px;font-size:.88rem;col
   <div class="card contact rv">
     <div class="tag">Contato</div>
     <h2>Tem um impasse? Vamos conversar.</h2>
-    <p class="muted">Escreva para o e-mail do projeto ou nos chame no Instagram.</p>
+    <p class="muted">Conte o que está acontecendo e mostramos por onde começar. Escreva para o e-mail do projeto ou chame no Instagram.</p>
     <div class="btns" style="justify-content:center"><a class="btn primary" href="mailto:solucoesbsl@gmail.com">solucoesbsl@gmail.com <i>→</i></a><a class="btn ghost" href="https://www.instagram.com/foradostribunais/" target="_blank" rel="noopener">@foradostribunais</a></div>
   </div>
 </div></section>
 </main>
 
 <footer><div class="wrap">
-  <p><strong>Aviso:</strong> o Fora dos Tribunais é uma iniciativa de estudantes e não realiza negócios jurídicos: não presta serviços de advocacia, consultoria ou parecer jurídico. Nada neste site substitui a orientação de um advogado ou da Defensoria Pública.</p>
+  <p><strong>Aviso:</strong> o Fora dos Tribunais é uma iniciativa de estudantes e não realiza negócios jurídicos: não presta serviços de advocacia, consultoria ou parecer jurídico e não conduz mediações nem conciliações. Nada neste site substitui a orientação de um advogado ou da Defensoria Pública.</p>
   <p>© 2026 Fora dos Tribunais · Brasília, DF</p>
 </div></footer>
 
