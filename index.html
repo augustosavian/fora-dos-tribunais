@@ -91,6 +91,27 @@ header.compact:has(nav.open) .logo{opacity:0;pointer-events:none}
 footer{border-top:1px solid var(--line);padding:38px 0 46px;font-size:.88rem;color:var(--muted)}footer p{max-width:740px}
 .js .rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
 .js .rv.in{opacity:1;transform:none}
+.split{display:grid;gap:48px;grid-template-columns:1fr 1fr;align-items:start}
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:20px;border-top:1px solid rgba(255,255,255,.2);padding-top:22px;margin-top:34px}
+.mini small{display:block;font:700 .7rem var(--disp);letter-spacing:.14em;text-transform:uppercase;opacity:.65;margin-bottom:6px}.mini span{font-size:.95rem}
+.fm{display:grid;gap:16px}.fm label{display:block;font:600 .8rem var(--disp);letter-spacing:.03em}
+.fm input,.fm select,.fm textarea{display:block;width:100%;margin-top:7px;padding:14px 16px;font:400 1rem var(--sans);color:inherit;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.22);border-radius:12px;transition:border-color .25s,box-shadow .25s,background .25s}
+.fm select option{background:var(--deep);color:var(--deep-ink)}.fm ::placeholder{color:inherit;opacity:.45}
+.fm input:focus,.fm select:focus,.fm textarea:focus{outline:0;border-color:var(--accent);box-shadow:0 0 0 4px rgba(224,121,79,.25);background:rgba(255,255,255,.11)}
+.r2{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+.fm .ck{display:flex;gap:10px;align-items:center;font:500 .9rem var(--sans);letter-spacing:0;cursor:pointer}.ck input{width:auto;margin:0;accent-color:var(--accent)}
+.sb{display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}.note{margin:0;font-size:.8rem;opacity:.7;max-width:330px}
+.st{display:none;margin:0;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.1);font-size:.9rem}.st.show{display:block;animation:pop .4s}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}}
+.team{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:36px}
+.mem{text-align:center;padding:30px 22px}
+.ph{width:112px;height:112px;margin:0 auto 18px;border-radius:50%;overflow:hidden;background:var(--bg);border:2px solid var(--line);transition:transform .4s cubic-bezier(.2,.8,.2,1),border-color .3s}
+.mem:hover .ph{transform:scale(1.07) rotate(-3deg);border-color:var(--accent)}
+.ph svg,.ph img{width:100%;height:100%;display:block}.ph svg{color:var(--muted)}.ph img{object-fit:cover}
+.mem h3{margin-bottom:6px}.mem .role{font:700 .7rem var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}.mem p{font-size:.93rem;color:var(--muted);margin:0 0 4px}
+.col p{margin:0 0 .9em;font-size:.97rem}.col p:last-child{margin:0}
+@media (max-width:820px){.split{grid-template-columns:1fr;gap:34px}}
+@media (max-width:560px){.r2,.mini{grid-template-columns:1fr}}
 @media (max-width:640px){section{padding:52px 0}.hero{padding:52px 0 44px}.logo{font-size:1rem}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
 </style>
@@ -99,7 +120,7 @@ footer{border-top:1px solid var(--line);padding:38px 0 46px;font-size:.88rem;col
 <header id="hd"><div class="wrap hb" id="hb">
   <a class="logo" id="logo" href="#top">Fora dos <span>Tribunais</span></a>
   <nav id="nav" aria-label="Seções"><div class="ni">
-    <a href="#ideia">A ideia</a><a href="#caminhos">Caminhos</a><a href="#areas">Seu caso</a><a href="#fontes">Direcionamentos</a><a href="#como">Como funciona</a><a href="#contato">Contato</a>
+    <a href="#ideia">A ideia</a><a href="#caminhos">Caminhos</a><a href="#areas">Seu caso</a><a href="#fontes">Direcionamentos</a><a href="#como">Como funciona</a><a href="#quem">Quem somos</a><a href="#duvidas">Dúvidas</a><a href="#contato">Contato</a>
   </div></nav>
 </div></header>
 
@@ -109,7 +130,6 @@ footer{border-top:1px solid var(--line);padding:38px 0 46px;font-size:.88rem;col
   <h1 class="rv" style="--d:.08s">Todo conflito pode começar a se resolver <em style="color:var(--accent);font-family:var(--ital);font-weight:400">antes</em> do processo.</h1>
   <p class="lead rv" style="--d:.16s">Está em um conflito e não sabe por onde começar? Nós orientamos e direcionamos você ao caminho certo, antes de qualquer processo. Uma iniciativa de estudantes do Ibmec Brasília.</p>
   <div class="btns rv" style="--d:.24s"><a class="btn primary" href="#contato">Quero conversar <i>→</i></a><a class="btn ghost" href="#ideia">Entenda a ideia</a></div>
-  <div class="flags rv" style="--d:.32s"><span>Projeto de estudantes</span><span>Sem advocacia</span><span>Orientação e direcionamento</span></div>
 </div></section>
 
 <section id="ideia" class="deep"><div class="wrap">
@@ -176,11 +196,45 @@ footer{border-top:1px solid var(--line);padding:38px 0 46px;font-size:.88rem;col
   </div>
 </div></section>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="av" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><circle cx="50" cy="38" r="17" fill="currentColor"/><path d="M14 104c0-24 16-38 36-38s36 14 36 38z" fill="currentColor"/></symbol></svg>
+<section id="quem" style="border-top:1px solid var(--line)"><div class="wrap">
+  <div class="tag rv">Quem somos</div>
+  <h2 class="rv">Por trás do FT</h2>
+  <div class="two">
+    <div class="col rv"><h3>Como nasceu</h3><p>O Fora dos Tribunais nasceu na disciplina de Métodos Adequados de Solução de Controvérsias, no Ibmec Brasília. A partir dela, montamos um espaço para quem tem um conflito e não sabe por onde começar.</p></div>
+    <div class="col rv" style="--d:.1s"><h3>Por que esse nome</h3><p>Fora dos Tribunais não é contra os tribunais. É sobre o que vem antes deles: entender o conflito, conhecer as opções e chegar ao lugar certo.</p><p>Por isso dizemos com clareza o que somos: estudantes, não advogados. Nosso papel é orientar e direcionar, e ser o começo do caminho.</p></div>
+  </div>
+  <div class="team">
+    <article class="card mem rv"><div class="ph"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#av"/></svg></div><h3>Augusto Savian</h3><p>3º semestre de Direito · Ibmec Brasília</p></article>
+    <article class="card mem rv" style="--d:.1s"><div class="ph"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#av"/></svg></div><h3>Heitor Argolo</h3><p>3º semestre de Direito · Ibmec Brasília</p></article>
+    <article class="card mem rv" style="--d:.2s"><div class="ph"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#av"/></svg></div><h3>Nicole Lauande</h3><p>3º semestre de Direito · Ibmec Brasília</p></article>
+  </div>
+</div></section>
+
+<section id="duvidas" class="deep"><div class="wrap split">
+  <div>
+    <div class="tag rv">Dúvidas e newsletter</div>
+    <h2 class="rv">Mandou a dúvida, mostramos o caminho.</h2>
+    <p class="muted rv" style="font-size:1.1rem">Conte o que está acontecendo. Respondemos por e-mail com orientação e direcionamento: para onde ir e a quem procurar. Se quiser, também enviamos as novidades do projeto.</p>
+    <div class="mini rv"><div><small>O que você recebe</small><span>Orientação e direcionamento</span></div><div><small>O que não fazemos</small><span>Parecer jurídico ou representação</span></div></div>
+  </div>
+  <form id="fm" class="fm rv" style="--d:.12s">
+    <label>E-mail *<input name="email" type="email" required placeholder="nome@email.com" autocomplete="email"></label>
+    <div class="r2"><label>Nome *<input name="nome" required placeholder="Seu nome" autocomplete="name"></label>
+    <label>Tipo de conflito<select name="tipo"><option>Não sei classificar</option><option>Família</option><option>Consumo</option><option>Trabalho</option><option>Empresas e sociedades</option><option>Vizinhança e condomínio</option><option>Contratos e moradia</option><option>Saúde</option><option>Poder público</option><option>Outro</option></select></label></div>
+    <label>Já existe processo na Justiça?<select name="proc"><option>Não</option><option>Sim</option><option>Não sei</option></select></label>
+    <label>Sua dúvida *<textarea name="msg" required rows="5" placeholder="Conte, em poucas linhas, o que está acontecendo."></textarea></label>
+    <label class="ck"><input type="checkbox" name="news"> Quero receber novidades do projeto por e-mail</label>
+    <div class="sb"><p class="note">Não envie documentos nem dados sensíveis neste primeiro contato. Ao enviar, você concorda que o Fora dos Tribunais responda por e-mail.</p><button class="btn primary" type="submit">Enviar dúvida <i>→</i></button></div>
+    <p id="st" class="st" role="status"></p>
+  </form>
+</div></section>
+
 <section id="contato"><div class="wrap">
   <div class="card contact rv">
     <div class="tag">Contato</div>
-    <h2>Tem um impasse? Vamos conversar.</h2>
-    <p class="muted">Conte o que está acontecendo e mostramos por onde começar. Escreva para o e-mail do projeto ou chame no Instagram.</p>
+    <h2>Prefere falar direto?</h2>
+    <p class="muted">Escreva para o e-mail do projeto ou chame no Instagram.</p>
     <div class="btns" style="justify-content:center"><a class="btn primary" href="mailto:solucoesbsl@gmail.com">solucoesbsl@gmail.com <i>→</i></a><a class="btn ghost" href="https://www.instagram.com/foradostribunais/" target="_blank" rel="noopener">@foradostribunais</a></div>
   </div>
 </div></section>
@@ -224,6 +278,16 @@ if('IntersectionObserver' in window){
 }else{d.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')})}
 var rail=d.getElementById('rail');
 d.querySelectorAll('.arw').forEach(function(b){b.addEventListener('click',function(){rail.scrollBy({left:b.dataset.d*330,behavior:'smooth'})})});
+var f=d.getElementById('fm'),st=d.getElementById('st');
+f.addEventListener('submit',function(e){
+  e.preventDefault();
+  var v=function(n){return (f.elements[n].value||'').trim()};
+  var body='Nome: '+v('nome')+'\nE-mail: '+v('email')+'\nTipo de conflito: '+v('tipo')+'\nJá existe processo: '+v('proc')+'\n\nDúvida:\n'+v('msg')+(f.elements.news.checked?'\n\nQuero receber novidades do projeto por e-mail.':'');
+  var url='mailto:solucoesbsl@gmail.com?subject='+encodeURIComponent('Dúvida (Fora dos Tribunais): '+v('tipo'))+'&body='+encodeURIComponent(body);
+  st.textContent='Abrindo seu aplicativo de e-mail com a mensagem pronta. Se nada abrir, escreva direto para solucoesbsl@gmail.com.';
+  st.classList.add('show');
+  location.href=url;
+});
 })();
 </script>
 </body>
